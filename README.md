@@ -19,16 +19,14 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/JoaoFranco03/photography-portfolio">
+  <a href="https://github.com/jackrocca/portfolio">
     <img src="dist/assets/Logo.jpg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Photography Portfolio</h3>
+  <h3 align="center">Portfolio Website</h3>
 
   <p align="center">
     A Website created using Tailwind CSS, HTML, CSS <br /> and JavaScript that can be used as a Photography Portfolio.
@@ -71,10 +69,6 @@
 
 # 📋 About The Project <a name="about-the-project"></a>
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/JoaoFranco03/photography-portfolio)
-
-This project is a web-based portfolio that beautifully showcases the photography work of Sophia Williams, a fictional photographer. The portfolio was skillfully built using a combination of powerful front-end technologies, including Tailwind CSS, CSS, HTML, and JavaScript.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🛠️ Built With <a name="built-with"></a>
@@ -86,24 +80,14 @@ This project is a web-based portfolio that beautifully showcases the photography
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Quick Start <a name="quick-start"></a>
 
-Create your own page with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/JoaoFranco03/photography-portfolio)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🎯 Getting Started <a name="getting-started"></a>
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### 🏗️ Installation <a name="installation"></a>
 
 1. Clone the repo
 
 ```sh
- git clone https://github.com/JoaoFranco03/photography-portfolio/.git
+ git clone https://github.com/jackrocca/portfolio/.git
 ```
 
 2.  Run the following command:
