@@ -26,5 +26,15 @@
    50% { transform: rotate(10.0deg) }
    60% { transform: rotate( 0.0deg) }
   100% { transform: rotate( 0.0deg) }
-}
+  }
+
+
+  .dot {
+    transform: translateX(0%);
+  }
+  
+  .dot.translate-x-full {
+    transform: translateX(100%);
+  }
+
 }
