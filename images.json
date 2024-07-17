@@ -1,7 +1,99 @@
 [
   {
+    "src": "dist/assets/photos/2024/san-francisco/03DCF163-E0C0-4CE7-81FE-6B602B06356F_1_105_c.jpeg",
+    "alt": "03DCF163-E0C0-4CE7-81FE-6B602B06356F_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/0529C8A8-8F29-4B2C-8E21-C4C848C0FC76_1_105_c.jpeg",
+    "alt": "0529C8A8-8F29-4B2C-8E21-C4C848C0FC76_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/45EFBA83-F49E-43EA-81ED-07E7663B5CFE_1_105_c.jpeg",
+    "alt": "45EFBA83-F49E-43EA-81ED-07E7663B5CFE_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/591473A7-C866-47E6-9AD0-7C580B0D1869_1_105_c.jpeg",
+    "alt": "591473A7-C866-47E6-9AD0-7C580B0D1869_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/61284432-405C-489D-91BC-892178A8B164_1_105_c.jpeg",
+    "alt": "61284432-405C-489D-91BC-892178A8B164_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/6370A9FC-42E4-4681-AD86-C0396A83B98E_1_105_c.jpeg",
+    "alt": "6370A9FC-42E4-4681-AD86-C0396A83B98E_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/66EB77A5-B937-4860-A08D-9F667A4215C7_1_105_c.jpeg",
+    "alt": "66EB77A5-B937-4860-A08D-9F667A4215C7_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/82130C1C-91E7-444D-9F36-DE42DB7610DC_1_105_c.jpeg",
+    "alt": "82130C1C-91E7-444D-9F36-DE42DB7610DC_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/847B37CC-1BBB-4EE6-9D06-31FC6E670DB6_1_105_c.jpeg",
+    "alt": "847B37CC-1BBB-4EE6-9D06-31FC6E670DB6_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/A4C8C7F6-1A20-416C-872A-99B492D74C4A_1_105_c.jpeg",
+    "alt": "A4C8C7F6-1A20-416C-872A-99B492D74C4A_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/B5A30FF5-228B-4C18-AA90-507393E40028_1_105_c.jpeg",
+    "alt": "B5A30FF5-228B-4C18-AA90-507393E40028_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/BD3F63E1-5486-49B2-8552-B9C61FA8F355_1_105_c.jpeg",
+    "alt": "BD3F63E1-5486-49B2-8552-B9C61FA8F355_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/C9ADCDEB-499C-4F24-ACDE-531ADFF41111_1_105_c.jpeg",
+    "alt": "C9ADCDEB-499C-4F24-ACDE-531ADFF41111_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/D8E506AA-ED3C-4A37-9698-6E463ED76DAD_1_105_c.jpeg",
+    "alt": "D8E506AA-ED3C-4A37-9698-6E463ED76DAD_1_105_c"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/digital-kauai-lighthouse.jpeg",
+    "alt": "digital-kauai-lighthouse"
+  },
+  {
     "src": "dist/assets/photos/2024/san-francisco/digital-kauai-waterfall.jpeg",
     "alt": "digital-kauai-waterfall"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/digital-ocean-beach-surfer-barrel-dunes.jpeg",
+    "alt": "digital-ocean-beach-surfer-barrel-dunes"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/digital-ocean-beach-surfer-barrell-grass.jpeg",
+    "alt": "digital-ocean-beach-surfer-barrell-grass"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/digital-sonomaraceway-velocityinvitational-mcclaren.jpeg",
+    "alt": "digital-sonomaraceway-velocityinvitational-mcclaren"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-machu-picchu-mountain.jpeg",
+    "alt": "film-machu-picchu-mountain"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-machu-picchu-overlook.jpeg",
+    "alt": "film-machu-picchu-overlook"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-nyc-basketball-court.jpeg",
+    "alt": "film-nyc-basketball-court"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-ocean-beach-sunset.jpg",
+    "alt": "film-ocean-beach-sunset"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-ocean-beach-surfer-wave.jpeg",
+    "alt": "film-ocean-beach-surfer-wave"
   },
   {
     "src": "dist/assets/photos/2024/san-francisco/film-sf-cliffs-edge-pacific-ocean.jpeg",
@@ -58,5 +150,21 @@
   {
     "src": "dist/assets/photos/2024/san-francisco/film-sf-tree-at-end-of-path.jpeg",
     "alt": "film-sf-tree-at-end-of-path"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-yankees-game-jeter-fan.jpg",
+    "alt": "film-yankees-game-jeter-fan"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/film-zac-and-tony-la-dusk.jpeg",
+    "alt": "film-zac-and-tony-la-dusk"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/nyc-00002.jpg",
+    "alt": "nyc-00002"
+  },
+  {
+    "src": "dist/assets/photos/2024/san-francisco/nyc-00022.jpg",
+    "alt": "nyc-00022"
   }
 ]
