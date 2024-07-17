@@ -1,414 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JACK ROCCA</title>
-  <meta name="description"
-    content="What's up! I'm Jack and this is a small slice of the internet that I have built to display my interests and projects.">
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="dist/assets/favicon.ico" />
-  <link rel="stylesheet" href="dist/output.css" />
-  <!-- Start - Fancybox Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- End - Fancybox Scripts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="dist/output.css" />
-  <link rel="stylesheet" href="https://use.typekit.net/fkv6gnm.css">
-  <!-- Include Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Rocca</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles/variables.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/masonry.js" type="module"></script>
+    <script src="scripts/navigation.js"></script>
 </head>
+<body class="bg-background text-text">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background bg-opacity-90">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold">Jack Rocca</h1>
+        </div>
+    </header>
 
-<body
-  class="bg-white h-screen text-black px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <!-- Navbar -->
-  <header class="flex w-full overflow-hidden pt-10 pb-1">
-    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-      <div class="container mx-auto flex flex-wrap items-center justify-between">
-        <div class="mr-4 md:mr-8 ml-2 md:ml-6">
-          <a href="index.html" class="text-4xl"> Jack Rocca </a>
+    <!-- Landing Page Slideshow -->
+    <div class="relative h-screen">
+        <div class="absolute inset-0">
+          <div class="slideshow hidden md:block">
+            <!-- Desktop images -->
+            <img src="dist/assets/photos/2024/san-francisco/film-sf-goldengate-overlook-foggy-day.jpeg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+            <img src="dist/assets/photos/2024/san-francisco/film-sf-graffiti-structure-ggbridge-background.jpeg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+            <!-- Add more desktop images as needed -->
+          </div>
+          <div class="slideshow md:hidden">
+              <!-- Mobile images -->
+              <img src="dist/assets/photos/2024/san-francisco/film-sf-golden-gate-bridge-path.jpeg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000">
+              <img src="dist/assets/photos/2024/san-francisco/film-sf-tree-at-end-of-path.jpeg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+              <!-- Add more mobile images as needed -->
+          </div>
         </div>
-        <div class="md:hidden">
-          <button @click="open = !open"
-            class="tap-highlight-transparent text-black w-5 h-5 relative focus:outline-none">
-            <span class="sr-only">Open main menu</span>
-            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-              <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
-                :class="{'opacity-0': open }"></span>
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
-                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
-            </div>
-          </button>
+    </div>
+
+    <!-- Events Section -->
+    <section id="events" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl mb-8">Recent Events</h2>
+        <div class="masonry grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="masonry-item">
+            <img src="path/to/event1.jpg" alt="Event 1" class="w-full h-auto">
+          </div>
+          <div class="masonry-item">
+            <img src="path/to/event2.jpg" alt="Event 2" class="w-full h-auto">
+          </div>
+          <div class="masonry-item">
+            <img src="path/to/event3.jpg" alt="Event 3" class="w-full h-auto">
+          </div>
         </div>
-        <div id="menu"
-          class="w-full md:w-auto transition-all ease-out duration-1000 md:transition-none md:flex md:items-center text-right"
-          :class="{'hidden md:flex': !open, 'block': open}"
-          x-show="open || window.innerWidth >= 768"
-          x-transition:enter="transition ease-out duration-1000"
-          x-transition:enter-start="opacity-0 scale-90"
-          x-transition:enter-end="opacity-100 scale-100"
-          x-transition:leave="transition ease-in duration-1000"
-          x-transition:leave-start="opacity-100 scale-100"
-          x-transition:leave-end="opacity-0 scale-90">
-          <ul id="ulMenu"
-            class="flex flex-col md:flex-row md:items-center md:space-x-5 mt-5 md:mt-0 items-end">
-            <li class="group transition duration-300 w-full md:w-auto">
-              <a href="index.html" class="font-quincy font-regular text-2xl tap-highlight-transparent custom-underline inline-block">photography</a>
-            </li>
-            <li class="group transition duration-300 w-full md:w-auto">
-              <a href="dist/projects.html" class="font-quincy font-regular text-2xl tap-highlight-transparent custom-underline inline-block">projects</a>
-            </li>
-            <li class="group transition duration-300 w-full md:w-auto">
-              <a href="dist/cube.html" class="font-quincy font-regular text-2xl tap-highlight-transparent custom-underline inline-block">blog</a>
-            </li>
-            <li class="group transition duration-300 w-full md:w-auto">
-              <a href="dist/about_me.html" class="font-quincy font-regular text-2xl tap-highlight-transparent custom-underline inline-block">me</a>
-            </li>
-          </ul>
-        </div>
+    </section>
+
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-background bg-opacity-70 backdrop-filter backdrop-blur-md shadow-lg">
+      <div class="container mx-auto relative">
+        <ul id="menu" class="flex justify-center items-center h-16">
+          <li class="menu-item">Portfolio</li>
+          <li class="menu-item">Lifestyle</li>
+          <li class="menu-item">Projects</li>
+          <li class="menu-item">Blog</li>
+          <li class="menu-item">About Me</li>
+        </ul>
+        <div id="sliding-line"></div>
       </div>
     </nav>
-  </header>
-  <!-- Content -->
-  <br></br>
-  <!-- Gallery -->
-  <div class="container mx-auto"></div>
-    <div id="custom-controls-gallery" class="relative w-full mt-5 md:mt-10 lg:mt-2" data-carousel="slide">
-      <!-- Carousel wrapper with Responsive Size -->
-      <div class="relative w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto h-60 sm:h-80 md:h-96 lg:h-[80vh] overflow-hidden rounded-lg">
-          <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="dist/assets/photos/2023/san-francisco/film-ocean-beach-sunset.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-          </div>
-          <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-              <img src="dist/assets/photos/2024/san-francisco/film-sf-goldengate-overlook-foggy-day.jpeg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-          </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="dist/assets/photos/2023/san-francisco/film-ocean-beach-sunset.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-          </div>
-          <!-- Item 4 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="dist/assets/photos/2023/san-francisco/film-ocean-beach-sunset.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-          </div>
-          <!-- Item 5 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="dist/assets/photos/2023/san-francisco/film-ocean-beach-sunset.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-          </div>
-      </div>
-      <div class="flex justify-center items-center pt-2 sm:pt-4">
-          <button type="button" class="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-              <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
-                  <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-                  </svg>
-                  <span class="sr-only">Previous</span>
-              </span>
-          </button>
-          <button type="button" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
-              <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
-                  <svg class="rtl:rotate-180 w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                  </svg>
-                  <span class="sr-only">Next</span>
-              </span>
-          </button>
-      </div>
-    </div>
-  <!-- San Francisco, February 17th, 2024 -->
-  <div class="container mx-auto">
-    <div class="flex items-center">
-      <h2 class="text-2xl pt-10 pb-8 font-quincy font-regular mr-8 ml-4">san francisco </h2>
-      <div class="flex-grow border-b-2 border-gray-200"></div>
-      <div class="flex items-end">
-        <h4 class="text-xl pt-10 pb-8 font-quincy font-regular mr-8 ml-4">feb. 17th, 2024</h4>
-      </div>
-    </div>
-    <section class="text-neutral-700">
-      <div class="container w-full">
-        <div class="flex flex-wrap w-full">
-          <!-- Image Gallery -->
-          <!-- Left Side -->
-          <div class="flex w-1/2 flex-wrap">
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-kid-standing-on-graffiti-structure.jpeg" data-fancybox="gallery">
-                  <img alt="a film picture of the Golden Gate Bridge with a path leading to it"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110 rounded-tl-lg"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-kid-standing-on-graffiti-structure.jpeg" style="border-top-left-radius: 5px;" loading="lazy"/>
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-tree-at-end-of-path.jpeg" data-fancybox="gallery">
-                  <img alt = "a film picture of a tree at the end of a path in san francisco"
-                    class="block h-full w-full object-cover object-center animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-tree-at-end-of-path.jpeg" loading="lazy"/>
-                </a>
-              </div>
-            </div>
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-couple-walking-through-landsend.jpeg"
-                  data-fancybox="gallery">
-                  <img alt="A film picture of a couple walking through landsend in san francisco"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-couple-walking-through-landsend.jpeg" style="border-bottom-left-radius: 15px;" loading="lazy"/>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Right Side -->
-          <div class="flex w-1/2 flex-wrap">
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-golden-gate-bridge-boat.jpeg"
-                  data-fancybox="gallery">
-                  <img alt="A film picture of the Golden Gate Bridge with a boat in the water below it"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-golden-gate-bridge-boat.jpeg" style="border-top-right-radius: 5px;" loading="lazy"/>
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-graffiti-on-wall-meme.jpeg"
-                  data-fancybox="gallery">
-                  <img alt="a film picture of a kid standing on a graffiti structure in san francisco"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-graffiti-on-wall-meme.jpeg" loading="lazy"/>
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-couple-walking-down-tree-path.jpeg"
-                  data-fancybox="gallery">
-                  <img alt="a film picture of a couple walking down a tree path in san francisco"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-couple-walking-down-tree-path.jpeg"  loading="lazy"/>
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2024/san-francisco/film-sf-cliffs-edge-pacific-ocean.jpeg"
-                  data-fancybox="gallery">
-                  <img alt="a film picture of the cliffs edge of the pacific ocean in san francisco"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2024/san-francisco/film-sf-cliffs-edge-pacific-ocean.jpeg"  loading="lazy"/>
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                  <a href="dist/assets/photos/2024/san-francisco/film-sf-golden-gate-bridge-through-trees.jpeg" 
-                  data-fancybox="gallery">
-                    <img alt="a film picture of the Golden Gate Bridge through trees in san francisco"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                      src="dist/assets/photos/2024/san-francisco/film-sf-golden-gate-bridge-through-trees.jpeg" style="border-bottom-right-radius: 5px;"  loading="lazy"/>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Section Close -->
-        </div> <!-- This closes the flex wrap div for the  images -->
-      </div> <!-- This closes the container -->
-    </section>
-  </div>
 
-
-<!-- Mexico, November 1-7, 2022 -->
-<div class="container mx-auto" px-4>
-  <!-- Header Section -->
-  <div class="flex items-center">
-    <h2 class="text-2xl pt-10 pb-8 font-quincy font-regular mr-8 ml-4">mexico</h2>
-    <div class="flex-grow border-b-2 border-gray-200"></div>
-    <div class="flex items-end">
-      <h4 class="text-xl pt-10 pb-8 font-quincy font-regular mr-8 ml-4"> nov. 1-7th, 2022</h4>
-    </div>
-  </div>
-  <!-- PHOTO COLLECTION SECTION-->
-  <section class="text-neutral-700">
-    <div class="container w-full">
-      <div class="flex flex-wrap w-full">
-        <!-- Left Side -->
-        <div class="flex w-1/2 flex-wrap">
-          <div class="w-full md:w-1/2 p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-beached-pongas.jpeg"
-                data-fancybox="gallery">
-                <img alt="a film picture of beached pongas in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-beached-pongas.jpeg" style="border-top-left-radius: 5px" loading="lazy"/>
-              </a>
-            </div>
-          </div>
-          <div class="w-1/2 p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-doubleexposure-birds-boat-sea.jpeg"
-                data-fancybox="gallery">
-                <img alt="a film picture of a double exposure of birds and a boat on the sea in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-doubleexposure-birds-boat-sea.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-          </div>
-          <div class="w-1/2 p-1 aspect-w-16/9">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-vwbug-driving-down-espenad.jpeg"
-                data-fancybox="gallery">
-                <img alt="a film picture of a VW Bug driving down an espenad in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-vwbug-driving-down-espenad.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-hotel.jpeg"
-                data-fancybox="gallery">
-                <img alt="a film picture of a VW Bug driving down an espenad in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-hotel.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Right Side-->
-        <div class="flex w-1/2 flex-wrap">
-          <div class="w-full p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-cian-and-pac-fishing-boat.jpeg" data-fancybox="gallery">
-                <img alt="a film picture of Cian and Pac on a fishing boat in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-cian-and-pac-fishing-boat.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-          </div>
-          <div class="w-full p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-fishing-boat-full-speed.jpeg" data-fancybox="gallery">
-                <img alt="a film picture of a fishing boat at full speed in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-fishing-boat-full-speed.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-          </div>
-          <div class="w-1/2 p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-marina-boats.jpeg" data-fancybox="gallery">
-                <img alt="a film picture of boats in a marina in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-marina-boats.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-          </div>
-          <div class="w-1/2 p-1">
-            <div class="overflow-hidden h-full w-full">
-              <a href="dist/assets/photos/2022/mexico/film-mexico-fishing-boat-full-speed.jpeg" data-fancybox="gallery">
-                <img alt="a film picture of a fishing boat at full speed in mexico"
-                  class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                  src="dist/assets/photos/2022/mexico/film-mexico-fishing-boat-full-speed.jpeg"  loading="lazy"/>
-              </a>
-            </div>
-            </div>
-            <div class="w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="dist/assets/photos/2022/mexico/film-mexico-marina-boats.jpeg" data-fancybox="gallery">
-                  <img alt="a film picture of boats in a marina in mexico"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="dist/assets/photos/2022/mexico/film-mexico-marina-boats.jpeg"  loading="lazy"/>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Section Close -->
-        </div> <!-- This closes the flex wrap div for the  images -->
-      </div> <!-- This closes the container -->
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="max-w-screen-xl py-16 mx-auto">
-      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
-        <div>
-          <p class="font-quincy font-regular"><b>JACK ROCCA</b></p>
-          <p class="mt-4 font-quincy font-regular text-sm text-gray-600 dark:text-gray-300">
-            San Francisco, CA
-          </p>
-          <div class="flex mx-auto">
-            <div class="mx-auto space-x-6 flex mt-8 text-gray-600 dark:text-gray-300">
-              <a class="transition duration-300 hover:opacity-75" href="https://www.instagram.com" target="_blank"
-                rel="noreferrer">
-                <span class="sr-only"> Instagram </span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                </svg>
-              </a>
-              <a class="transition duration-300 hover:opacity-75" href="https://github.com/jackrocca" target="_blank" rel="noreferrer">
-                <span class="sr-only">GitHub</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.7-2.782.603-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.089 2.912.833.091-.646.349-1.086.635-1.335-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.27 2.75 1.02A9.564 9.564 0 0 1 12 6.839c.85 0 1.7.114 2.5.334 1.909-1.29 2.747-1.02 2.747-1.02.546 1.376.202 2.394.1 2.646.64.699 1.028 1.591 1.028 2.682 0 3.841-2.337 4.687-4.565 4.936.359.31.678.92.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.577.688.479C19.137 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path>
-                </svg>
-              </a>
-              <a class="transition duration-300 hover:opacity-75" href="https://twitter.com" target="_blank"
-                rel="noreferrer">
-                <span class="sr-only"> Twitter </span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                  <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                </svg>
-              </a>
-              <a class="transition duration-300 hover:opacity-75" href="https://www.linkedin.com" target="_blank"
-                rel="noreferrer">
-                <span class="sr-only">LinkedIn</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                </svg>
-              </a>
-              <a class="transition duration-300 hover:opacity-75" href="https://www.youtube.com" target="_blank" rel="noreferrer">
-                <span class="sr-only">YouTube</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517c0,1.617,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.62,0.2-3.237v-1.517C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="mt-8 text-xs text-gray-600 font-quincy font-regular text-center">
-        © 2023 Developed and Designed by
-        <a href="https://github.com/jackrocca/portfolio" class="underline">Yours Truly 💁🏻‍♀️</a>
-      </p>
-    </div>
-  </footer>
-  <!-- Script for the LightBox -->
-  <script>
-    Fancybox.bind("[data-fancybox]", {});
-  </script>
-  <script src="dist/fade_in.js"></script>
-  <script src="dist/menu.js"></script>
-  <script src="dist/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@latest/dist/flowbite.min.js"></script>
-
-
+<div id="swipe-indicator-left" class="swipe-indicator" aria-hidden="true">&larr;</div>
+<div id="swipe-indicator-right" class="swipe-indicator" aria-hidden="true">&rarr;</div>
 </body>
-
 </html>
+
