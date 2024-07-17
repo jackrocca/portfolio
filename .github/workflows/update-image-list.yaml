@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.PAT }}
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
@@ -28,4 +30,8 @@ jobs:
         git config --local user.name "GitHub Action"
         git add images.json
         git commit -m "Update images.json" -a || echo "No changes to commit"
-        git push
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PAT }}
+        branch: ${{ github.ref }}
