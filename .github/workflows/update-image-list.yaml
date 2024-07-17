@@ -1,0 +1,26 @@
+name: Update Image List
+
+on:
+  push:
+    paths:
+      - 'dist/assets/photos/2024/san-francisco/**'
+
+jobs:
+  update-image-list:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - run: npm ci
+    - name: Generate image list
+      run: npm run generate-image-list
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add images.json
+        git commit -m "Update images.json" -a || echo "No changes to commit"
+        git push

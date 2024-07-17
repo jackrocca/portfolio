@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Rocca</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles/variables.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/masonry-grid.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+</head>
+<body class="bg-background text-text">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background bg-opacity-90">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-2xl font-bold">Jack Rocca</h1>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8 masonry-container">
+      <div class="masonry-grid">
+        <div class="grid-sizer"></div>
+        <!-- Images will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-background bg-opacity-70 backdrop-filter backdrop-blur-md shadow-lg">
+      <div class="container mx-auto relative">
+        <ul id="menu" class="flex justify-center items-center h-16">
+          <li class="menu-item">Portfolio</li>
+          <li class="menu-item">Lifestyle</li>
+          <li class="menu-item">Projects</li>
+          <li class="menu-item">Blog</li>
+          <li class="menu-item">About Me</li>
+        </ul>
+        <div id="sliding-line"></div>
+      </div>
+    </nav>
+</body>
+</html>

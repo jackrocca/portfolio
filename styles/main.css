@@ -1,0 +1,91 @@
+#bottom-nav {
+  transition: transform 0.3s ease-in-out;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* For Firefox, which doesn't support backdrop-filter */
+@supports not (backdrop-filter: blur(8px)) {
+  #bottom-nav {
+    background-color: rgba(234, 244, 244, 0.9); /* Adjust the color and opacity as needed */
+  }
+}
+
+#menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-item:hover, .menu-item.active {
+  color: var(--accent-4);
+}
+
+
+#sliding-line {
+  height: 2px;
+  background-color: var(--accent-4);
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+/* Add padding to the bottom of the main content to prevent overlap */
+body {
+  padding-bottom: 4rem; /* Adjust this value based on the height of your navigation */
+}
+
+
+.masonry-grid {
+  width: 100%;
+}
+
+.masonry-container {
+  padding-top: 100px; /* Adjust this value as needed */
+}
+
+.grid-sizer,
+.grid-item {
+  width: calc(33.333% - 14px); /* Adjust for gutter */
+}
+
+.grid-item {
+  margin-bottom: 20px; /* Vertical spacing */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.grid-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid-item img {
+  display: block; /* Remove any potential inline spacing */
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(50% - 10px); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%; /* Full width on very small screens */
+  }
+}
