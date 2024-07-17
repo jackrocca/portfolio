@@ -9,14 +9,19 @@ jobs:
   update-image-list:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
-        node-version: '14'
-    - run: npm ci
+        node-version: '20'
+    - name: Install dependencies
+      run: npm ci
     - name: Generate image list
-      run: npm run generate-image-list
+      run: |
+        ls -R dist/assets/photos/2024/san-francisco
+        npm run generate-image-list
+      env:
+        CI: true
     - name: Commit changes
       run: |
         git config --local user.email "action@github.com"
